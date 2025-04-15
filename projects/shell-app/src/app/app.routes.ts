@@ -11,4 +11,13 @@ export const APP_ROUTES: Routes = [
         exposedModule: './Component',
       }).then((m) => m.LoginComponent),
   },
+  {
+    path: 'news',
+    loadComponent: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4400/remoteEntry.js',
+        exposedModule: './ComponentNews',
+      }).then((m) => m.NewsComponent),
+  },
 ];

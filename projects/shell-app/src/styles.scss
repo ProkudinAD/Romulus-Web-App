@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-bacground-color: rgb(20, 19, 20);
+  --second-bacground-color: rgb(6, 36, 62);
+  --elements-bacground-color: rgb(28, 27, 29);
+  --main-text-color: #ecf0f1;
+}
+
+body {
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
