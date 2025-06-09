@@ -16,18 +16,23 @@ export class NewsService implements ICrudService<Guid> {
   getList(): Observable<NewsMainDto[]> {
     return this.client.list();
   }
+
   getById(id: Guid): Observable<NewsMainDto> {
     throw new Error('Method not implemented.');
   }
-  save(model: Guid): Observable<Guid> {
+
+  save(model: NewsMainDto): Observable<NewsMainDto> {
     throw new Error('Method not implemented.');
   }
-  update(model: Guid): Observable<Guid> {
+
+  update(model: NewsMainDto): Observable<NewsMainDto> {
     throw new Error('Method not implemented.');
   }
-  saveOrUpdate(model: Guid): Observable<Guid> {
+
+  saveOrUpdate(model: NewsMainDto): Observable<NewsMainDto> {
     throw new Error('Method not implemented.');
   }
+
   delete(id: Guid): Observable<void> {
     throw new Error('Method not implemented.');
   }

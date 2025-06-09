@@ -1,0 +1,26 @@
+<mat-grid-list [cols]="gridConfig.cols" [rowHeight]="gridConfig.rowHeight">
+  <mat-grid-tile *ngFor="let item of items">
+    <div class="grid-item">
+      <!-- For debugging -->
+      <pre>{{ item | json }}</pre>
+    </div>
+  </mat-grid-tile>
+  <!--   <mat-grid-tile *ngFor="let item of items">
+    <mat-card *ngIf="!customItemTemplate">
+      <div class="grid-item" [ngClass]="{'has-image': itemConfig.showImage}">
+        <img *ngIf="itemConfig.showImage && item.imageUrl" 
+             [src]="item.imageUrl" 
+             [class]="'image-' + itemConfig.imagePosition">
+        
+        <div class="content">
+          <h3 *ngIf="itemConfig.showTitle">{{item.title}}</h3>
+          <p *ngIf="itemConfig.showDescription">{{item.description}}</p>
+        </div>
+      </div>
+    </mat-card>
+    <ng-container *ngIf="customItemTemplate">
+      <ng-container *ngTemplateOutlet="customItemTemplate; context: { $implicit: item }">
+      </ng-container>
+    </ng-container>
+  </mat-grid-tile> -->
+</mat-grid-list>

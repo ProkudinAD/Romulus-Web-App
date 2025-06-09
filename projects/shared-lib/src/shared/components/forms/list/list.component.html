@@ -1,11 +1,11 @@
 <div class="dataGrid">
-  <div class="action-buttons">
+  <!--   <div class="action-buttons">
     <button mat-fab extended (click)="refresh()" [disabled]="loading">
       <mat-icon>refresh</mat-icon>
     </button>
-  </div>
+  </div> -->
 
-  <div *ngIf="loading" class="loading-container">
+  <!--   <div *ngIf="loading" class="loading-container">
     <mat-spinner></mat-spinner>
     <p>Loading data...</p>
   </div>
@@ -13,9 +13,17 @@
   <div *ngIf="error" class="error-container">
     <mat-icon>error_outline</mat-icon>
     <p>{{ error }}</p>
-  </div>
+  </div> -->
+  <lib-grid
+    *ngIf="!loading && !error"
+    [items]="model"
+    [gridConfig]="effectiveGridConfig"
+    [itemConfig]="effectiveItemConfig"
+    [customItemTemplate]="customItemTemplate"
+    >
+  </lib-grid>
 
-  <mat-grid-list cols="3" rowHeight="100px" *ngIf="!loading && !error">
+  <!-- <mat-grid-list cols="3" rowHeight="100px" *ngIf="!loading && !error">
     <mat-grid-tile *ngFor="let item of model">
       <div class="grid-item">
         <div class="item-content">
@@ -23,5 +31,5 @@
         </div>
       </div>
     </mat-grid-tile>
-  </mat-grid-list>
+  </mat-grid-list> -->
 </div>
